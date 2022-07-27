@@ -1,0 +1,24 @@
+<div class="col-md-9">
+    <table id="example" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nazwa</th>
+                <th>Data</th>
+                <th>Godzina</th>
+                <th>Użytkownik</th>
+                <th>Lokal</th>
+            </tr>
+        </thead>
+            <tbody>
+                {% for report in reports %}
+                    <tr>
+                        <td>{{ report.name }}</td>
+                        <td>{{ report.date|date('Y-m-d') }}</td>
+                        <td>{{ report.date|date('H:i') }}</td>
+                        <td>{{ report.username }}</td>
+                        <td>{{ report.place }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+</div>  

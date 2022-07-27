@@ -1,0 +1,21 @@
+{{ form_start(form) }}
+
+    <div class="form-group mb-4">
+        {{ form_label(form.place) }}
+        {{ form_widget(form.place, {'attr': {'class': 'form-select py-1 px-4'}}) }}
+    </div>
+
+    <div class="mb-4">
+        {{ form_label(form.date_start) }}
+        {{ form_widget(form.date_start, {'attr': {'class': 'form-control  py-1 px-4'}}) }}     
+    </div>
+
+    <div class="mb-4">
+        {{ form_label(form.date_end) }}
+        {{ form_widget(form.date_end, {'attr': {'class': 'form-control  py-1 px-4'}}) }}     
+    </div>
+
+        {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary', }}) }}     
+        {{ form_label(form.submit) }}
+
+{{ form_end(form) }}

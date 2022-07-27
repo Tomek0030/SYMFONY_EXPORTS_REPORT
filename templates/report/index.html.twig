@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Raport{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <div class="example-wrapper">
+                <h1>Raport</h1>
+            </div>
+        </div>
+    </div>
+        
+    <div class="row">
+            <div class="col-md-3">
+                {% include 'report/filter.html.twig' with {form: form} only %}
+            </div>
+         
+         {% include 'report/card.html.twig' with {reports: reports} only %}
+    </div>
+    
+{% endblock %}
